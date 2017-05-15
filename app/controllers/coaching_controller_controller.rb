@@ -1,8 +1,9 @@
 class CoachingControllerController < ApplicationController
 
   ASKS = [
-    { query: "hello", answer: "wesh" },
-    { query: "how are you", answer: "fine" }
+    { query: "I am going to work right now!", answer: "Good boy !" },
+    { query: "I met a girl last night", answer: "I don't care, get dressed and go to work!" },
+    { query: "Can I eat some pizza?", answer: "Silly question, get dressed and go to work!" },
   ]
 
   def ask
@@ -10,7 +11,6 @@ class CoachingControllerController < ApplicationController
   end
 
   def answer
-    #@asks = ASKS
     @query = params[:query]
     @asks = ASKS.select {|a| a[:query] == @query }
   end
