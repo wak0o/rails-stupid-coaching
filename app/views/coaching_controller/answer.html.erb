@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Stupid Coaching</h1>
+      <h2>The Ask</h2>
+       <% @asks.each do |ask| %>
+      <h3><%= ask[:query]%></h3>
+      <h4>You</h4>
+
+      <h2>The answer</h2>
+      <h3><%= ask[:answer] %></h3>
+      <% end %>
+      <h4>Your coach</h4>
+      <%= link_to "Ask a new question", ask_path %>
+    </div>
+  </div>
+</div>
